@@ -1,34 +1,36 @@
 import { books, authors, genres, BOOKS_PER_PAGE } from './data.js'
+import BookPreview from './component.js'
+// import default BookPreview;
 let page = 1;
-let matches = books
-function createBookElement(book) {
-    const { author, id, image, title } = book;
-    const previewElement = document.createElement('button');
-   previewElement.classList.add('preview');
-    previewElement.setAttribute('data-preview', id);
+let matches = books;
+// function createBookElement(book) {
+//     const { author, id, image, title } = book;
+//     const previewElement = document.createElement('button');
+//    previewElement.classList.add('preview');
+//     previewElement.setAttribute('data-preview', id);
  
-   const imageElement = document.createElement('img');
-   imageElement.classList.add('preview__image');
-    imageElement.src = image;
-    previewElement.appendChild(imageElement);
+//    const imageElement = document.createElement('img');
+//    imageElement.classList.add('preview__image');
+//     imageElement.src = image;
+//     previewElement.appendChild(imageElement);
  
-    const infoElement = document.createElement('div');
-    infoElement.classList.add('preview__info');
+//     const infoElement = document.createElement('div');
+//     infoElement.classList.add('preview__info');
  
-    const titleElement = document.createElement('h3');
-    titleElement.classList.add('preview__title');
-    titleElement.textContent = title;
-    infoElement.appendChild(titleElement);
+//     const titleElement = document.createElement('h3');
+//     titleElement.classList.add('preview__title');
+//     titleElement.textContent = title;
+//     infoElement.appendChild(titleElement);
  
-   const authorElement = document.createElement('div');
-  authorElement.classList.add('preview__author');
-   authorElement.textContent = authors[author];
-    infoElement.appendChild(authorElement);
+//    const authorElement = document.createElement('div');
+//   authorElement.classList.add('preview__author');
+//    authorElement.textContent = authors[author];
+//     infoElement.appendChild(authorElement);
  
-   previewElement.appendChild(infoElement);
+//    previewElement.appendChild(infoElement);
  
-    return previewElement;
- }
+//     return previewElement;
+//  }
   
 
 
